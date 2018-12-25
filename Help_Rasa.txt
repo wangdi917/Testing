@@ -1,0 +1,73 @@
+
+计算时间大约10毫秒，网络延迟大概300毫秒。
+
+阅读理解 vs 表示学习，mutual vector
+soft match vs exact match
+Skill vs Intent
+技术roadmap vs 功能roadmap
+
+
+	# route[idx] = max( (log(self.FREQ.get(sentence[idx : x + 1]) or 1) - logtotal + route[x+1][0],    x) for x in DAG[idx] )
+	# route[idx] = max( (log(self.FREQ.get() or 1) - logtotal + route[x+1][0],    x) for x in DAG[idx] )
+	# route[idx] = max( (log() - logtotal + route[x+1][0],    x) for x in DAG[idx] )
+	# route[idx] = max( (y, x) for x in DAG[idx] )
+
+
+Rasa摘得：
+
+/rasa_nlu/registry.py 第69行用registered_pipeline_templates指定了spaCy或TF
+/rasa_nlu/component.py 到处都在from rasa_nlu import registry
+/rasa_nlu/config.py 第38行load()返回class RasaNLUModelConfig。
+/rasa_nlu/model.py 第118行用class Trainer指定了train()、persist()、components.ComponentBuilder()。train()返回class Interpreter，persist()返回path，ComponentBuilder引用了/rasa_nlu/utils/component.py。
+/rasa_nlu/model.py 第57行用class Metadata指定了load()、persist()
+/rasa_nlu/model.py 第243行用class Interpreter指定了load()、create()、parse()
+/rasa_nlu/train.py 第127行do_train()用trainer实例化了class Trainer，所以class trainer包含train()返回class Interpreter，最终do_train()返回trainer、interpreter、persisted_path。
+
+
+实现多意图的config：/home/fangning141/interactive_dialogue/_rasa_chatbot_vip/invest_nlu_model_config.yml
+
+其实就是one-hot单词包：intent_featurizer_count_vectors
+
+
+Rasa运行：
+
+### Train/Run rasa NLU
+
+python -m rasa_nlu.train -t 4 -c invest_nlu_model_config.yml --data data_train --path models --project vip --fixed_model_name demo --verbose
+
+
+python -m rasa_nlu.server --num_threads 4 -c invest_nlu_model_config.yml --path models
+
+python -m rasa_nlu.run  -m  models/vip/demo
+
+curl -XPOST localhost:5000/parse -d '{"q":"操作"}' | jq
+python -m rasa_nlu.evaluate --data data/tmp1+2_test.json -m models/vip/demo
+
+
+
+### Train/Run rasa core
+
+python -m rasa_core.train -d invest_domain.yml -s data/invest_story.md -o models/dialogue --epochs 300 --verbose
+
+
+python -m rasa_core.server -d models/dialogue -u models/vip/demo --verbose
+
+python -m rasa_core.run -d models/dialogue -u models/vip/demo --verbose --debug
+
+
+
+curl -XPOST localhost:5005/conversations/default/parse -d '{"query":"操作"}'|jq
+
+curl -XPOST http://localhost:5005/conversations/default/continue -d '{"executed_action": "utter_operation", "events": []}'|jq
+
+curl -XPOST localhost:5005/conversations/default/respond -d '{"query":"操作"}' | jq
+
+curl http://localhost:5005/conversations/default/tracker |jq
+
+
+
+curl -XPOST localhost:5005/conversations/default/respond -d '{"partyNo":"111", "question":"操作","channel":"APP","appVersion":"3.7.3.1","msgId":"EDEDE12345678"}'| jq
+
+
+Annaconda 增加删除镜像 channel
+https://blog.csdn.net/mtj66/article/details/57074986

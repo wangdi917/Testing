@@ -1,0 +1,108 @@
+https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+http://gitlab.lujs.cn/ai/dlg-app
+git@gitlab.lujs.cn:ai/dlg-app.git
+
+
+https://blog.csdn.net/tangbin330/article/details/9128765
+https://www.cnblogs.com/qiaoconglovelife/p/5506643.html
+
+push将本地仓库推至远程仓库。
+pull将远程仓库同步拉至本地仓库并merge。
+fetch将远程仓库同步拉至本地仓库。
+
+git clone https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+touch watch.html
+echo "Watching some porns is always helpful." > watch.html
+git add watch.html
+git commit -m "Porns committed."
+git push origin master
+
+git pull origin master
+等于
+git fetch
+git diff origin/master
+git merge origin
+
+
+https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6
+在仓库中会有一个默认的master主分支，用来存储最终确定版本的代码。我们应该用其他的子分支来进行编辑和更改，确定之后再提交到主分支。
+从主分支创建子分支时就对当时的主分支做了一个拷贝。如果此后其他分支的人改动了主分支，那么在你提交到主分支之前必须先从主分支上拉取那些更新。
+有时也可以在仓库目录下点击New pull request直接merge，子分支的修改会被加进主分支，但是主分支的修改不会影响到子分支。
+
+dev分支代码改动了，需要合并到master主支：
+	git checkout dev
+	git pull
+	……改动和递交
+	git checkout master
+	git merge dev
+	git push -u origin master
+master主支代码改动了，需要更新dev分支：
+	git checkout master
+	git pull
+	git checkout dev
+	git merge master
+	git push -u origin dev
+
+删除master：
+https://blog.csdn.net/u010015108/article/details/78650181
+
+新建空白分支：
+https://blog.csdn.net/googlemi/article/details/78619780
+
+git remote -v
+git remote add origin https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+git remote add origin git@gitlab.lujs.cn:ai/dlg-app.git
+git checkout master
+git pull
+git branch -a
+cd 项目的根目录而不是.git所在的父目录
+git checkout -b applier
+	等于git branch applier 和 git checkout applier 新建再切换
+	如果不加-b那么只创建不切换
+echo "Any porn stars recommended?" >> watch.html
+sed -i '$d' watch.html
+echo "Any porns recommended?" >> watch.html
+git add . && git commit -m "No more porns from now on!"
+git commit --amend -m "More porns still needed."
+git checkout master
+git merge applier
+git push origin master
+可以用git branch查看当前有哪些分支。用git checkout -b XXX是一种的备份方式。用git branch -d XXX强制删除一个本地分支。用git push origin --delete强制删除一个远程分支。
+
+查看远程仓库地址
+	git remote -v
+切换远程仓库地址：
+	git remote add origin URL
+修改远程仓库地址
+	git remote set-url origin URL
+先删除再添加远程仓库地址
+	git remote rm origin
+	git remote add origin URL
+
+
+https://segmentfault.com/q/1010000009549291/a-1020000009549574
+为什么要【先add/commit，然后pull，最后push？】
+commit是防止远程直接覆盖你本地，只要有修改都会需要你commit。pull是因为远程仓库中有最新的东西和你本地不一致，git知道远程仓库的东西不能丢掉，所以让你pull下来存到本地，更新本地文件，最后push上去。
+
+https://www.cnblogs.com/tocy/p/git-stash-reference.html
+git log展示远程仓库的提交历史，-p选项展示每次提交的修改情况，-2选项展示最近两次提交历史。
+
+https://www.cnblogs.com/yanghaizhou/p/5269899.html
+git stash把工作区设置为上次提交后的情况，方便中途处理重要情况，之后通过pop将工作区恢复至之前的状况。
+如果直接修改某段代码的话，一旦如果发现修改不合适想回退的话很麻烦，这个时候可以用stash将将修改暂存起来。然后重新编写代码，如果发现修改不合适想回退，于是可以用git stash pop命令，弹出刚才的内容 （注意先用git checkout . 清空工作区）。
+
+
+
+撤销commit
+git commit -m "Cancel this commit."
+git reset HEAD~ 
+
+https://blog.csdn.net/fuchaosz/article/details/52170105
+要回退到某一历史版本，使用git checkout commitID。看完后要回到最新代码，使用git checkout master。
+自己分支回滚直接用reset，公共分支回滚用revert。
+git reflog
+git reset --hard Obfafd
+git push -f // 强制推送到远程仓库
+revert会产生一个新的提交。虽然代码回退了，但是版本依然是向前的。所以当你用revert回退之后，所有人pull操作会导致他们的代码也自动的回退了。 
+git revert HEAD~1 // 撤销上上次的提交
+git revert 0ffaacc // 撤销0ffaacc这次提交

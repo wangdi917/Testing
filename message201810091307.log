@@ -1,0 +1,4 @@
+2018-10-09 13:07:54,989 - Test_Log.py[line:54] - INFO: Here is a loggging info message.
+2018-10-09 13:07:54,990 - Test_Log.py[line:55] - WARNING: Here is a loggging warning message.
+2018-10-09 13:07:54,990 - Test_Log.py[line:56] - ERROR: Here is a loggging error message.
+2018-10-09 13:07:54,990 - Test_Log.py[line:57] - CRITICAL: Here is a loggging critical message.
