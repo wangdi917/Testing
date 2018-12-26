@@ -1,4 +1,4 @@
-https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+https://github.com/wangdi917/XXX.git
 http://gitlab.lujs.cn/ai/dlg-app
 git@gitlab.lujs.cn:ai/dlg-app.git
 
@@ -10,7 +10,7 @@ push将本地仓库推至远程仓库。
 pull将远程仓库同步拉至本地仓库并merge。
 fetch将远程仓库同步拉至本地仓库。
 
-git clone https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+git clone https://github.com/wangdi917/XXX.git
 touch watch.html
 echo "Watching some porns is always helpful." > watch.html
 git add watch.html
@@ -50,7 +50,7 @@ https://blog.csdn.net/u010015108/article/details/78650181
 https://blog.csdn.net/googlemi/article/details/78619780
 
 git remote -v
-git remote add origin https://github.com/wangdi917/Machine-Learning-Fundamentals.git
+git remote add origin https://github.com/wangdi917/XXX.git
 git remote add origin git@gitlab.lujs.cn:ai/dlg-app.git
 git checkout master
 git pull

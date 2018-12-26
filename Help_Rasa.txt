@@ -24,9 +24,7 @@ Rasa摘得：
 /rasa_nlu/train.py 第127行do_train()用trainer实例化了class Trainer，所以class trainer包含train()返回class Interpreter，最终do_train()返回trainer、interpreter、persisted_path。
 
 
-实现多意图的config：/home/fangning141/interactive_dialogue/_rasa_chatbot_vip/invest_nlu_model_config.yml
-
-其实就是one-hot单词包：intent_featurizer_count_vectors
+实现多意图的config：/invest_nlu_model_config.yml，其实就是one-hot单词包：intent_featurizer_count_vectors
 
 
 Rasa运行：
@@ -69,5 +67,54 @@ curl http://localhost:5005/conversations/default/tracker |jq
 curl -XPOST localhost:5005/conversations/default/respond -d '{"partyNo":"111", "question":"操作","channel":"APP","appVersion":"3.7.3.1","msgId":"EDEDE12345678"}'| jq
 
 
+
 Annaconda 增加删除镜像 channel
 https://blog.csdn.net/mtj66/article/details/57074986
+
+
+
+Rasa奥义：
+
+
+对话历史存在DB即MySQL里，对话中间状态（比如词槽slot）存在缓存即Redis里。
+
+训练命令的epoch表示所有语料会重复训练300轮，每轮之间会打乱顺序。
+
+Rasa用DNN而不是CNN，是因为自然语言需要人造正则，不需要滑动窗口。
+
+
+NER所用的特征之一是关键词，储存在/jieba_userdict/product_dict.txt和/jieba_userdict/jieba_userdict.txt里，作为一个数百维的one-hot向量。
+NER所用的特征之二是正则，储存在/data_train/regex.md里，作为一个4维的one-hot向量。
+关键词向量类似于[0 0 0 1]，表示命中哪一个关键词。
+正则向量类似于[0 0 1]，表示命中哪一条正则。
+将它们一起拼接到word2vec旁边，送到/rasa_nlu/classifiers/embedding_intent_classifier.py的2层全连接神经网络里面，并且计算confidence。
+
+NER的识别用正则+CRF：由name:"intent_entity_featurizer_regex"和name:"ner_crf"分别指定。CRF由/rasa_nlu/extractors/crf_entity_extractor.py指定[before, word, after]特征pattern。
+
+
+NLU的意图由/rasa_nlu/classifiers/__init__.py预设，由/invest_domain.yml重设。
+NLU的意图保持由/invest_domain.yml的last_product_intent实现。
+当所有NLU意图的信心不够时，用callback做兜底回复。
+
+NLU不需要上下文；NLG需要上下文。
+训练好的NLU模型存在/model/vip/demo里；训练好的NLG模型存在/model/dialogue里（比如policy_0_MemoizationPolicy）里。
+
+
+词槽slot由/invest_domain.yml的slot定义，包括4个产品要素（即NER的4个实体）和前轮对话意图，由/rasa_core/tracker.py和/rasa_core/tracker_store.py存储，由主程序/bot.py的get_slot调用。
+
+NLG的模板由/data/invest_story.md预设，由/rasa_core/policies/ensemble.py指定策略，交互学习(Interactive learning)或者在线训练(On-line learning)其实就是训练/data/invest_story.md，
+即/data/invest_story.md可以由于训练而更改。
+
+如果是/rasa_core/policies/memoization.py那么全靠预设模板；如果是/rasa_core/policies/keras_policy.py那么用LSTM算机器人回复动作的概率。
+
+如果NLG需要调用外部应用，那么/data/invest_story.md会用action_cleanslot和bot.py的ActionCleanSlot清理词槽。
+
+训练NLG的预设数据是/data/products_new.csv。
+训练NLG输入的是上轮意图、本轮意图、对话中间状态（比如词槽slot）、回复动作。比如3轮对话，int1-act1-int2-act2-int3-act3会有多种排列组合方式。训练NLG就是取概率最大的那种。
+把预设的/data/invest_story.md作为正样本，把没有出现的story作为负样本，共计14个意图、8种回复、3种训练NLG。
+
+
+主程序/bot.py的for e in list_products中，e[0]是display_name，e[1]是confidence，e[2]是产品ID，e[3]是收益。
+
+主程序/bot.py的SearchProductName搜索关键词，后台已经用TF-IDF倒排了产品列表。因为ES搜索结果混乱所以需要ActionSearchProduct二次搜索，所以用difflib.SequenceMatcher基于Hamming距离算出confidence，
+因为前轮的对话意图可以帮助本轮ActionSearchProduct搜索产品。
