@@ -4,19 +4,9 @@
 
 陆金所
 ai9mdzno
+5268550704470566
 
 一个人一天可以看2000条或者听500条语料。
-
-
-数据分发平台
-https://30.94.8.18/
-https://lu-datatransfer.paic.com.cn/UniExClient/login.jsp
-172.28.61.250
-file://xqsh-l2756/Share/0917
-
-內荐系统网址
-http://neitui.zhiye.com/lu
-
 
 
 linux系统基本上分两大类：
@@ -116,6 +106,10 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/f
 
 Neo4J
 
+NGinx
+
+Restful API
+
 tree-based LSTM
 
 zhusuan
@@ -133,7 +127,12 @@ zhusuan
 KS、PSI、Lawerance Curve、X2分割、IV值、皮尔森相关系数（Pearson correlation coefficient）。可以用Bayesian Optimization来调hyper-parameter。
 
 时间序列如果用GRU来做会有overfitting，所以用XGBoost/LightGBM做树。特征是日期、交易额度、单数等等，叶结点是预测的钱数，残差是RMSE。每条路径都对应一个钱数，
-每次训练就是走一次路径，把训练数据的钱数相加取平均。宁可要较大但是可控的RMSE、也不要偶尔非常outlier的RMSE。
+每次训练就是走一次路径，把训练数据得到的钱数相加取平均。宁可要较大但是可控的RMSE、也不要偶尔非常outlier的RMSE。
+
+阅读理解 vs 表示学习，mutual vector
+soft match vs exact match
+Skill vs Intent
+技术roadmap vs 功能roadmap
 
 
 
