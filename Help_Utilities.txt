@@ -1,45 +1,45 @@
-¸öÈËË°ÊÕµİÑÓĞÍ±£ÏÕ 95511 4001827726 gp02002029729014
+ä¸ªäººç¨æ”¶é€’å»¶å‹ä¿é™© 95511 4001827726 gp02002029729014
 
-±£³ÏÎ£¼±ĞÂ²úÆ·
+ä¿è¯šå±æ€¥æ–°äº§å“
 
-Â½½ğËù
+é™†é‡‘æ‰€
 ai9mdzno
 5268550704470566
 
-Ò»¸öÈËÒ»Ìì¿ÉÒÔ¿´2000Ìõ»òÕßÌı500ÌõÓïÁÏ¡£
+ä¸€ä¸ªäººä¸€å¤©å¯ä»¥çœ‹2000æ¡æˆ–è€…å¬500æ¡è¯­æ–™ã€‚
 
 
-linuxÏµÍ³»ù±¾ÉÏ·ÖÁ½´óÀà£º
-1 RedHatÏµÁĞ£ºRedhat¡¢Centos¡¢FedoraµÈ
-2 DebianÏµÁĞ£ºDebian¡¢UbuntuµÈ
+linuxç³»ç»ŸåŸºæœ¬ä¸Šåˆ†ä¸¤å¤§ç±»ï¼š
+1 RedHatç³»åˆ—ï¼šRedhatã€Centosã€Fedoraç­‰
+2 Debianç³»åˆ—ï¼šDebianã€Ubuntuç­‰
 
-RedHatÏµÁĞ£º
-1 ³£¼ûµÄ°²×°°ü¸ñÊ½ rpm °ü£¬°²×°rpm°üµÄÃüÁîÊÇ ¡°rpm -²ÎÊı¡±
-2 °ü¹ÜÀí¹¤¾ß yum
-3 Ö§³Ötar°ü
-DebianÏµÁĞ£º
-1 ³£¼ûµÄ°²×°°ü¸ñÊ½ deb °ü£¬°²×°deb°üµÄÃüÁîÊÇ ¡°dpkg -²ÎÊı¡±
-2 °ü¹ÜÀí¹¤¾ß apt-get
-3 Ö§³Ötar°ü
+RedHatç³»åˆ—ï¼š
+1 å¸¸è§çš„å®‰è£…åŒ…æ ¼å¼ rpm åŒ…ï¼Œå®‰è£…rpmåŒ…çš„å‘½ä»¤æ˜¯ â€œrpm -å‚æ•°â€
+2 åŒ…ç®¡ç†å·¥å…· yum
+3 æ”¯æŒtaråŒ…
+Debianç³»åˆ—ï¼š
+1 å¸¸è§çš„å®‰è£…åŒ…æ ¼å¼ deb åŒ…ï¼Œå®‰è£…debåŒ…çš„å‘½ä»¤æ˜¯ â€œdpkg -å‚æ•°â€
+2 åŒ…ç®¡ç†å·¥å…· apt-get
+3 æ”¯æŒtaråŒ…
 
 
-linuxÏÂµÄfindÎÄ¼ş²éÕÒÃüÁîÓëgrepÎÄ¼şÄÚÈİ²éÕÒÃüÁî
+linuxä¸‹çš„findæ–‡ä»¶æŸ¥æ‰¾å‘½ä»¤ä¸grepæ–‡ä»¶å†…å®¹æŸ¥æ‰¾å‘½ä»¤
 https://www.cnblogs.com/zhangmo/p/3571735.html
 find / -name *.py -print
 grep -nr --exclude-dir="testing" en_core_web_sm *
 grep -R "en_core_web_sm " *|grep -v "\testing/*"
 
 
-pythonÃæÊÔÌâ¿â
+pythoné¢è¯•é¢˜åº“
 http://www.cnblogs.com/lmx123/p/9212079.html
 
-ÈçºÎÔÚPythonÖĞÒ»´Î¶ÁÈ¡NĞĞÎÄ¼ş£¿
+å¦‚ä½•åœ¨Pythonä¸­ä¸€æ¬¡è¯»å–Nè¡Œæ–‡ä»¶ï¼Ÿ
 https://cloud.tencent.com/developer/ask/32256
 
 
-mapÊÇÓÃÍ¬Ñù·½·¨°ÑËùÓĞÊı¾İ¶¼¸Ä³É±ğµÄ£¬±ÈÈç°ÑÁĞ±íµÄÃ¿¸öÊı¶¼»»³ÉÆäÆ½·½¡£
-reduceÊÇÓÃÄ³ÖÖ·½·¨ÒÀ´Î°ÑËùÓĞÊı¾İ¶ª½øÈ¥×îºóµÃµ½Ò»¸ö½á¹û£¬±ÈÈç¼ÆËãÒ»¸öÁĞ±íËùÓĞÊıµÄºÍµÄ¹ı³Ì¾ÍÊÇÎ¬³ÖÒ»¸ö²¿·ÖºÍÈ»ºóÒÀ´Î°ÑÃ¿¸öÊı¼Ó½øÈ¥¡£
-filterÊÇÉ¸Ñ¡³öÆäÖĞÂú×ãÄ³¸öÌõ¼şµÄÄÇĞ©Êı¾İ£¬±ÈÈçÌô³öÁĞ±íÖĞËùÓĞ·Ç×ÔÈ»Êı¡£
+mapæ˜¯ç”¨åŒæ ·æ–¹æ³•æŠŠæ‰€æœ‰æ•°æ®éƒ½æ”¹æˆåˆ«çš„ï¼Œæ¯”å¦‚æŠŠåˆ—è¡¨çš„æ¯ä¸ªæ•°éƒ½æ¢æˆå…¶å¹³æ–¹ã€‚
+reduceæ˜¯ç”¨æŸç§æ–¹æ³•ä¾æ¬¡æŠŠæ‰€æœ‰æ•°æ®ä¸¢è¿›å»æœ€åå¾—åˆ°ä¸€ä¸ªç»“æœï¼Œæ¯”å¦‚è®¡ç®—ä¸€ä¸ªåˆ—è¡¨æ‰€æœ‰æ•°çš„å’Œçš„è¿‡ç¨‹å°±æ˜¯ç»´æŒä¸€ä¸ªéƒ¨åˆ†å’Œç„¶åä¾æ¬¡æŠŠæ¯ä¸ªæ•°åŠ è¿›å»ã€‚
+filteræ˜¯ç­›é€‰å‡ºå…¶ä¸­æ»¡è¶³æŸä¸ªæ¡ä»¶çš„é‚£äº›æ•°æ®ï¼Œæ¯”å¦‚æŒ‘å‡ºåˆ—è¡¨ä¸­æ‰€æœ‰éè‡ªç„¶æ•°ã€‚
 
 >>> map(lambda x:x*x,[0,1,2,3,4,5,6])
 [0, 1, 4, 9, 16, 25, 36]
@@ -47,24 +47,39 @@ filterÊÇÉ¸Ñ¡³öÆäÖĞÂú×ãÄ³¸öÌõ¼şµÄÄÇĞ©Êı¾İ£¬±ÈÈçÌô³öÁĞ±íÖĞËùÓĞ·Ç×ÔÈ»Êı¡£
 >>> filter(lambda x:x&1,[0,1,2,3,4,5,6])
 [1, 3, 5]
 
-Ò»ĞĞ´úÂëÊµÏÖ9*9³Ë·¨±í
+ä¸€è¡Œä»£ç å®ç°9*9ä¹˜æ³•è¡¨
 print ('\n'.join([' '.join(['%s*%s=%-2s' % (y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
 
 
-JavaÈçºÎÅäÖÃ»·¾³±äÁ¿
+Javaå¦‚ä½•é…ç½®ç¯å¢ƒå˜é‡
 https://blog.csdn.net/sinat_36403828/article/details/78045618
 https://blog.csdn.net/nextljp/article/details/77949597
 
-PythonÈçºÎÅäÖÃ»·¾³±äÁ¿
+Pythonå¦‚ä½•é…ç½®ç¯å¢ƒå˜é‡
 https://jingyan.baidu.com/article/3ea51489e1c2b752e61bbad0.html
 
-tensorflow-GPU°²×°
+tensorflow-GPUå®‰è£…
 https://blog.csdn.net/akon_wang_hkbu/article/details/78478513
 https://blog.csdn.net/sb19931201/article/details/53648615
 https://blog.csdn.net/ada_1215/article/details/72615245
 
 
 git@github.com:howl-anderson/Chinese_models_for_SpaCy.git
+
+Tasks < SemEval
+
+THULACï¼šä¸€ä¸ªé«˜æ•ˆçš„ä¸­æ–‡è¯æ³•åˆ†æå·¥å…·åŒ…
+https://github.com/ageron/handson-ml
+https://github.com/Embedding/Chinese-Word-Vectors
+https://github.com/buppt/ChineseNER
+https://github.com/facebookresearch/fastText/blob/master/docs/crawl-vectors.md
+https://github.com/thunlp/OpenKE
+https://github.com/gunthercox/ChatterBot
+https://github.com/explosion/spaCy
+https://github.com/thunlp/THULAC-Python
+
+æ¸…åå¤§å­¦å¼€æºè½¯ä»¶é•œåƒç«™
+https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 
 
 python -m pip install -U pip
@@ -80,29 +95,29 @@ sudo chown -R wangdi498:wangdi498 /home/wangdi498/anaconda3
 anaconda3/envs/rasa/lib/python3.6/site-packages/spacy-2.0.12.dist-info/METADATA
 anaconda3/envs/rasa/lib/python3.6/site-packages/en_core_web_sm-2.0.0-py3.6.egg-info
 
-conda·şÎñÆ÷ÔÚ¹úÍâ£¬ËÙ¶È·Ç³£Âı£¬ĞèÒª¼ÓÈë¹úÄÚÇå»ªµÄ¾µÏñ¡£
+condaæœåŠ¡å™¨åœ¨å›½å¤–ï¼Œé€Ÿåº¦éå¸¸æ…¢ï¼Œéœ€è¦åŠ å…¥å›½å†…æ¸…åçš„é•œåƒã€‚
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 
 
 
-ÖÇÄÜÍ¶ÑĞ
-Éî¶È·¢¾ò½ğÈÚÊĞ³¡µÄ·Ç½á¹¹»¯ĞÅÏ¢£¨ÈçÎÄ±¾ĞÅÏ¢£©£¬¹¹½¨ÓëÏÖÓĞÊı¾İÏµÍ³²»Í¬µÄ»ùÓÚ×ÔÈ»ÓïÑÔµÄ½ğÈÚÆ½Ì¨£¬ÎªÍ¶×ÊÕßµÄĞÅÏ¢ËÑ¼¯£¬³éÈ¡£¬·ÖÎöÌá¹©È«ĞÂµÄ½â¾ö·½°¸¡£
+æ™ºèƒ½æŠ•ç ”
+æ·±åº¦å‘æ˜é‡‘èå¸‚åœºçš„éç»“æ„åŒ–ä¿¡æ¯ï¼ˆå¦‚æ–‡æœ¬ä¿¡æ¯ï¼‰ï¼Œæ„å»ºä¸ç°æœ‰æ•°æ®ç³»ç»Ÿä¸åŒçš„åŸºäºè‡ªç„¶è¯­è¨€çš„é‡‘èå¹³å°ï¼Œä¸ºæŠ•èµ„è€…çš„ä¿¡æ¯æœé›†ï¼ŒæŠ½å–ï¼Œåˆ†ææä¾›å…¨æ–°çš„è§£å†³æ–¹æ¡ˆã€‚
 
-¸öĞÔ»¯½ğÈÚĞÅÏ¢ÍÆ¼ö
-ÊµÊ±¼à²âÈ«Çò½ğÈÚ¶¯Ì¬£¬ÀûÓÃ×ÔÈ»ÓïÑÔ´¦Àí¼¼ÊõºÍÉî¶ÈÑ§Ï°È«ÃæÕûºÏ×îĞÂ×ÊÑ¶£¬ÎªÍ¶×ÊÕß¸öĞÔ»¯¶¨Ïò³éÈ¡×îÏà¹ØĞÅÏ¢£¬°ÑÎÕÉÔ×İ¼´ÊÅµÄ½»Ò×Ê±»ú¡£
+ä¸ªæ€§åŒ–é‡‘èä¿¡æ¯æ¨è
+å®æ—¶ç›‘æµ‹å…¨çƒé‡‘èåŠ¨æ€ï¼Œåˆ©ç”¨è‡ªç„¶è¯­è¨€å¤„ç†æŠ€æœ¯å’Œæ·±åº¦å­¦ä¹ å…¨é¢æ•´åˆæœ€æ–°èµ„è®¯ï¼Œä¸ºæŠ•èµ„è€…ä¸ªæ€§åŒ–å®šå‘æŠ½å–æœ€ç›¸å…³ä¿¡æ¯ï¼ŒæŠŠæ¡ç¨çºµå³é€çš„äº¤æ˜“æ—¶æœºã€‚
 
-ÖÇÄÜ´óÊı¾İ
-Ìá¹©»ùÓÚĞÂÎÅÊÂ¼ş£¬¹«Ë¾¹«¸æ£¬Õş¸®ĞÅÏ¢¹«Ê¾£¬ĞĞÒµ·¨¹æÕş²ßµÈĞÅÏ¢ÕûºÏµÄ½ğÈÚ´óÊı¾İ¿â£¬ÀûÓÃ»úÆ÷Ñ§Ï°Ëã·¨Óë´«Í³Êı¾İÉî¶ÈÕûºÏ£¬¿ªÍØĞÂµÄÓ¦ÓÃ³¡¾°ºÍÍ¶×Ê»ú»á¡£
+æ™ºèƒ½å¤§æ•°æ®
+æä¾›åŸºäºæ–°é—»äº‹ä»¶ï¼Œå…¬å¸å…¬å‘Šï¼Œæ”¿åºœä¿¡æ¯å…¬ç¤ºï¼Œè¡Œä¸šæ³•è§„æ”¿ç­–ç­‰ä¿¡æ¯æ•´åˆçš„é‡‘èå¤§æ•°æ®åº“ï¼Œåˆ©ç”¨æœºå™¨å­¦ä¹ ç®—æ³•ä¸ä¼ ç»Ÿæ•°æ®æ·±åº¦æ•´åˆï¼Œå¼€æ‹“æ–°çš„åº”ç”¨åœºæ™¯å’ŒæŠ•èµ„æœºä¼šã€‚
 
 
 
-ºÃºÃÑ§Ï°ÌìÌìÏòÉÏ£º
+å¥½å¥½å­¦ä¹ å¤©å¤©å‘ä¸Šï¼š
 
-²îÒì»¯¾­Óª
+å·®å¼‚åŒ–ç»è¥
 
-×îĞ¡¿ÉÓÃ
+æœ€å°å¯ç”¨
 
-É£»ùÍ¼(Sankey)
+æ¡‘åŸºå›¾(Sankey)
 
 Neo4J
 
@@ -114,97 +129,97 @@ tree-based LSTM
 
 zhusuan
 
-¶ÔÓÚÃ»ÓĞÒâÏòµÄÓÃ»§²ÉÈ¡Íì»Ø»°Êõ£»¶ÔÓÚÎŞ·¨ÅĞ¶ÏÒâÏòµÄÓÃ»§²ÉÈ¡¶µµ×»°Êõ¡£
+å¯¹äºæ²¡æœ‰æ„å‘çš„ç”¨æˆ·é‡‡å–æŒ½å›è¯æœ¯ï¼›å¯¹äºæ— æ³•åˆ¤æ–­æ„å‘çš„ç”¨æˆ·é‡‡å–å…œåº•è¯æœ¯ã€‚
 
-ÖªÊ¶¿â½â¾öÓĞÃ»ÓĞ£»Ëã·¨½â¾ö¾«²»¾«¡£
+çŸ¥è¯†åº“è§£å†³æœ‰æ²¡æœ‰ï¼›ç®—æ³•è§£å†³ç²¾ä¸ç²¾ã€‚
 
-ÈË¿ÚÊôĞÔ¡¢Ïû·ÑÏ°¹ß¡¢µØÀí¡¢ĞĞÒµ¡¢Ó¦ÓÃĞËÈ¤¡£
+äººå£å±æ€§ã€æ¶ˆè´¹ä¹ æƒ¯ã€åœ°ç†ã€è¡Œä¸šã€åº”ç”¨å…´è¶£ã€‚
 
-ÈıÉıÒ»½µ£ºÌáÉıÒµ¼¨¡¢Ğ§ÂÊ¡¢ÌåÑé£¬½µµÍ³É±¾¡£
+ä¸‰å‡ä¸€é™ï¼šæå‡ä¸šç»©ã€æ•ˆç‡ã€ä½“éªŒï¼Œé™ä½æˆæœ¬ã€‚
 
-¼ÙÉèÓĞ10¸öÎïÌå£¬ÄÇÃ´RCNN×ö10´Î£¬fastRCNN×ö1´Î£¬fasterRCNN×ö0´Î¡£Ä¿±êº¯ÊıÓĞ5¸öloss£ºsmooth+inos¡£
+å‡è®¾æœ‰10ä¸ªç‰©ä½“ï¼Œé‚£ä¹ˆRCNNåš10æ¬¡ï¼ŒfastRCNNåš1æ¬¡ï¼ŒfasterRCNNåš0æ¬¡ã€‚ç›®æ ‡å‡½æ•°æœ‰5ä¸ªlossï¼šsmooth+inosã€‚
 
-KS¡¢PSI¡¢Lawerance Curve¡¢X2·Ö¸î¡¢IVÖµ¡¢Æ¤¶ûÉ­Ïà¹ØÏµÊı£¨Pearson correlation coefficient£©¡£¿ÉÒÔÓÃBayesian OptimizationÀ´µ÷hyper-parameter¡£
+KSã€PSIã€Lawerance Curveã€X2åˆ†å‰²ã€IVå€¼ã€çš®å°”æ£®ç›¸å…³ç³»æ•°ï¼ˆPearson correlation coefficientï¼‰ã€‚å¯ä»¥ç”¨Bayesian Optimizationæ¥è°ƒhyper-parameterã€‚
 
-Ê±¼äĞòÁĞÈç¹ûÓÃGRUÀ´×ö»áÓĞoverfitting£¬ËùÒÔÓÃXGBoost/LightGBM×öÊ÷¡£ÌØÕ÷ÊÇÈÕÆÚ¡¢½»Ò×¶î¶È¡¢µ¥ÊıµÈµÈ£¬Ò¶½áµãÊÇÔ¤²âµÄÇ®Êı£¬²Ğ²îÊÇRMSE¡£Ã¿ÌõÂ·¾¶¶¼¶ÔÓ¦Ò»¸öÇ®Êı£¬
-Ã¿´ÎÑµÁ·¾ÍÊÇ×ßÒ»´ÎÂ·¾¶£¬°ÑÑµÁ·Êı¾İµÃµ½µÄÇ®ÊıÏà¼ÓÈ¡Æ½¾ù¡£Äş¿ÉÒª½Ï´óµ«ÊÇ¿É¿ØµÄRMSE¡¢Ò²²»ÒªÅ¼¶û·Ç³£outlierµÄRMSE¡£
+æ—¶é—´åºåˆ—å¦‚æœç”¨GRUæ¥åšä¼šæœ‰overfittingï¼Œæ‰€ä»¥ç”¨XGBoost/LightGBMåšæ ‘ã€‚ç‰¹å¾æ˜¯æ—¥æœŸã€äº¤æ˜“é¢åº¦ã€å•æ•°ç­‰ç­‰ï¼Œå¶ç»“ç‚¹æ˜¯é¢„æµ‹çš„é’±æ•°ï¼Œæ®‹å·®æ˜¯RMSEã€‚æ¯æ¡è·¯å¾„éƒ½å¯¹åº”ä¸€ä¸ªé’±æ•°ï¼Œ
+æ¯æ¬¡è®­ç»ƒå°±æ˜¯èµ°ä¸€æ¬¡è·¯å¾„ï¼ŒæŠŠè®­ç»ƒæ•°æ®å¾—åˆ°çš„é’±æ•°ç›¸åŠ å–å¹³å‡ã€‚å®å¯è¦è¾ƒå¤§ä½†æ˜¯å¯æ§çš„RMSEã€ä¹Ÿä¸è¦å¶å°”éå¸¸outlierçš„RMSEã€‚
 
-ÔÄ¶ÁÀí½â vs ±íÊ¾Ñ§Ï°£¬mutual vector
+é˜…è¯»ç†è§£ vs è¡¨ç¤ºå­¦ä¹ ï¼Œmutual vector
 soft match vs exact match
 Skill vs Intent
-¼¼Êõroadmap vs ¹¦ÄÜroadmap
+æŠ€æœ¯roadmap vs åŠŸèƒ½roadmap
 
 
 
-Âß¼­Ë¹ÚĞ»Ø¹éÓë×î´óìØÄ£ĞÍ
+é€»è¾‘æ–¯è°›å›å½’ä¸æœ€å¤§ç†µæ¨¡å‹
 http://www.hankcs.com/ml/the-logistic-regression-and-the-maximum-entropy-model.html#h3-6
 
-ÓïÑÔÄ£ĞÍÆÀ¼ÛÖ¸±êPerplexity
+è¯­è¨€æ¨¡å‹è¯„ä»·æŒ‡æ ‡Perplexity
 https://blog.csdn.net/index20001/article/details/78884646
 
-ÉîÈëÑĞ¾¿NLUºÍDM
+æ·±å…¥ç ”ç©¶NLUå’ŒDM
 http://baijiahao.baidu.com/s?id=1601539772415682443&wfr=spider&for=pc
 
-ÈçºÎ´òÔìÖ÷¶¯Ê½¶Ô»°»úÆ÷ÈË
+å¦‚ä½•æ‰“é€ ä¸»åŠ¨å¼å¯¹è¯æœºå™¨äºº
 https://www.sohu.com/a/231794637_610300
 
 N-gram
 https://blog.csdn.net/songbinxu/article/details/80209197
 
-ÖĞÎÄ·Ö´Ê
+ä¸­æ–‡åˆ†è¯
 https://blog.csdn.net/liujianfei526/article/details/50640176
 https://blog.csdn.net/u012558945/article/details/79918771
 https://www.cnblogs.com/echo-cheng/p/7967221.html
 https://blog.csdn.net/rav009/article/details/12196623
 
-ÖĞÎÄ·Ö´ÊÉî¶ÈÑ§Ï°£¨×ÖÇ¶Èë+Bi-LSTM+CRF£©
+ä¸­æ–‡åˆ†è¯æ·±åº¦å­¦ä¹ ï¼ˆå­—åµŒå…¥+Bi-LSTM+CRFï¼‰
 https://blog.csdn.net/chivalrousli/article/details/70482488
 
-ÕâÀï¸ø³öÉÏÃæËã·¨ºÍword2vecÔ´ÂëÖĞµÄ±äÁ¿¶ÔÓ¦¹ØÏµ
+è¿™é‡Œç»™å‡ºä¸Šé¢ç®—æ³•å’Œword2vecæºç ä¸­çš„å˜é‡å¯¹åº”å…³ç³»
 https://www.cnblogs.com/pinard/p/7249903.html
 https://github.com/tmikolov/word2vec/blob/master/word2vec.c
-ÔÚÔ´´úÂëÖĞ£¬»ùÓÚNegative SamplingµÄCBOWÄ£ĞÍËã·¨ÔÚ464-494ĞĞ£¬»ùÓÚHierarchical SoftmaxµÄSkip-GramµÄÄ£ĞÍËã·¨ÔÚ520-542ĞĞ¡£
-ÔÚÔ´´úÂëÖĞ£¬neule¶ÔÓ¦ÎÒÃÇÉÏÃæµÄe, syn0¶ÔÓ¦ÎÒÃÇµÄxw, syn1neg¶ÔÓ¦ÎÒÃÇµÄ¦Èwi, layer1_size¶ÔÓ¦´ÊÏòÁ¿µÄÎ¬¶È£¬window¶ÔÓ¦ÎÒÃÇµÄc¡£negative¶ÔÓ¦ÎÒÃÇµÄneg, table_size¶ÔÓ¦ÎÒÃÇ¸º²ÉÑùÖĞµÄ»®·ÖÊıM¡£
-ÁíÍâ£¬vocab[word].code[d]Ö¸µÄÊÇ£¬µ±Ç°µ¥´ÊwordµÄ£¬µÚd¸ö±àÂë£¬±àÂë²»º¬Root½áµã¡£vocab[word].point[d]Ö¸µÄÊÇ£¬µ±Ç°µ¥´Êword£¬µÚd¸ö±àÂëÏÂ£¬Ç°ÖÃµÄ½áµã¡£ÕâĞ©ºÍ»ùÓÚHierarchical SoftmaxµÄÊÇÒ»ÑùµÄ¡£
+åœ¨æºä»£ç ä¸­ï¼ŒåŸºäºNegative Samplingçš„CBOWæ¨¡å‹ç®—æ³•åœ¨464-494è¡Œï¼ŒåŸºäºHierarchical Softmaxçš„Skip-Gramçš„æ¨¡å‹ç®—æ³•åœ¨520-542è¡Œã€‚
+åœ¨æºä»£ç ä¸­ï¼Œneuleå¯¹åº”æˆ‘ä»¬ä¸Šé¢çš„e, syn0å¯¹åº”æˆ‘ä»¬çš„xw, syn1negå¯¹åº”æˆ‘ä»¬çš„Î¸wi, layer1_sizeå¯¹åº”è¯å‘é‡çš„ç»´åº¦ï¼Œwindowå¯¹åº”æˆ‘ä»¬çš„cã€‚negativeå¯¹åº”æˆ‘ä»¬çš„neg, table_sizeå¯¹åº”æˆ‘ä»¬è´Ÿé‡‡æ ·ä¸­çš„åˆ’åˆ†æ•°Mã€‚
+å¦å¤–ï¼Œvocab[word].code[d]æŒ‡çš„æ˜¯ï¼Œå½“å‰å•è¯wordçš„ï¼Œç¬¬dä¸ªç¼–ç ï¼Œç¼–ç ä¸å«Rootç»“ç‚¹ã€‚vocab[word].point[d]æŒ‡çš„æ˜¯ï¼Œå½“å‰å•è¯wordï¼Œç¬¬dä¸ªç¼–ç ä¸‹ï¼Œå‰ç½®çš„ç»“ç‚¹ã€‚è¿™äº›å’ŒåŸºäºHierarchical Softmaxçš„æ˜¯ä¸€æ ·çš„ã€‚
 
-¼ÆËã·Ö´ÊÈ¨ÖØ
+è®¡ç®—åˆ†è¯æƒé‡
 http://f.dataguru.cn/thread-882078-1-1.html
 https://www.cnblogs.com/clover-siyecao/p/5726480.html
 https://blog.csdn.net/kl28978113/article/details/54580838
 
-word2vecÖĞµÄÊıÑ§Ô­ÀíÏê½â
+word2vecä¸­çš„æ•°å­¦åŸç†è¯¦è§£
 https://blog.csdn.net/itplus/article/details/37969635
 
-word2vecÔ­Àí
+word2vecåŸç†
 http://www.cnblogs.com/pinard/p/7160330.html
 http://www.hankcs.com/nlp/word2vec.html
 
-ÓÃgensimÑ§Ï°word2vec
+ç”¨gensimå­¦ä¹ word2vec
 https://www.cnblogs.com/pinard/p/7278324.html
 
-´ÊÏòÁ¿¾­µäÄ£ĞÍ£º´Óword2vec¡¢glove¡¢ELMoµ½BERT
+è¯å‘é‡ç»å…¸æ¨¡å‹ï¼šä»word2vecã€gloveã€ELMoåˆ°BERT
 https://blog.csdn.net/xiayto/article/details/84730009
 https://blog.csdn.net/weixin_37947156/article/details/83146141
 https://x-algo.cn/index.php/2018/11/12/3083/
 
 
-»ùÓÚÉñ¾­ÍøÂçµÄ¸ßĞÔÄÜÒÀ´æ¾ä·¨·ÖÎöÆ÷
+åŸºäºç¥ç»ç½‘ç»œçš„é«˜æ€§èƒ½ä¾å­˜å¥æ³•åˆ†æå™¨
 http://www.hankcs.com/nlp/parsing/neural-network-based-dependency-parser.html
 
-ÎÄ±¾Ö÷ÌâÄ£ĞÍLDA
-LDAÔ¤ÉèÈô¸ÉÖ÷Ìâ¡£Ã¿ÆªÎÄÕÂÓĞÁ½²¿·Ö£º1Èô¸É¸öÖ÷Í¼£¬2Ã¿¸öÖ÷ÌâÓĞ²»Í¬µÄ´Ê»ã·Ö²¼¡£
+æ–‡æœ¬ä¸»é¢˜æ¨¡å‹LDA
+LDAé¢„è®¾è‹¥å¹²ä¸»é¢˜ã€‚æ¯ç¯‡æ–‡ç« æœ‰ä¸¤éƒ¨åˆ†ï¼š1è‹¥å¹²ä¸ªä¸»å›¾ï¼Œ2æ¯ä¸ªä¸»é¢˜æœ‰ä¸åŒçš„è¯æ±‡åˆ†å¸ƒã€‚
 http://www.cnblogs.com/pinard/p/6831308.html
 http://www.cnblogs.com/pinard/p/6908150.html
 https://blog.csdn.net/FlySky1991/article/details/77623549
 
-ÎÄ±¾·ÖÀàÖ÷ÌâÔ¤²âFastText¡¢TextCNN¡¢TextRNN¡¢TextRCNNµÈµÈ×ÛÊö
+æ–‡æœ¬åˆ†ç±»ä¸»é¢˜é¢„æµ‹FastTextã€TextCNNã€TextRNNã€TextRCNNç­‰ç­‰ç»¼è¿°
 https://blog.csdn.net/qq_25439417/article/details/82529312
 
-¹Ø¼ü´ÊÕªÒª£º»ùÓÚpagerankÊµÏÖµÄtextrankºÍtextteaser
-¾ä×ÓÖØÒªĞÔµÄÌØÕ÷ÏòÁ¿ = [Î»ÖÃ£¬¹Ø¼ü´Ê£¬±êÌâ]
+å…³é”®è¯æ‘˜è¦ï¼šåŸºäºpagerankå®ç°çš„textrankå’Œtextteaser
+å¥å­é‡è¦æ€§çš„ç‰¹å¾å‘é‡ = [ä½ç½®ï¼Œå…³é”®è¯ï¼Œæ ‡é¢˜]
 https://blog.csdn.net/qq_14950717/article/details/78987342
 https://blog.csdn.net/Silience_Probe/article/details/80700018
 
-×¢ÒâÁ¦»úÖÆ
+æ³¨æ„åŠ›æœºåˆ¶
 https://blog.csdn.net/tg229dvt5i93mxaq5a6u/article/details/78422216
 
